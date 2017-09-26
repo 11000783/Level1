@@ -30,6 +30,10 @@ Song ding = new Song("/Users/league/Desktop/Level1/src/173157__orginaljun__bag-z
 		SwingUtilities.invokeLater(new Jukebox());
 	}
 
+	JFrame jfram = new JFrame();
+	JPanel jpan = new JPanel();
+	JButton button = new JButton("HI");
+	JButton jbutt = new JButton();
 	public void run() {
 
 		// 3. Find an mp3 on your computer or on the Internet.
@@ -37,10 +41,6 @@ Song ding = new Song("/Users/league/Desktop/Level1/src/173157__orginaljun__bag-z
 
 		// 5. Play the Song
 
-		JFrame jfram = new JFrame();
-		JPanel jpan = new JPanel();
-		JButton button = new JButton("HI");
-		JButton jbutt = new JButton();
 		jfram.add(jpan);
 		jpan.add(button);
 		jpan.add(jbutt);

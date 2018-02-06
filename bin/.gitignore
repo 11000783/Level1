@@ -32,7 +32,6 @@
 /Ruler.class
 /SensitiveKeyboard.class
 /SimpleCalculater.class
-/SlotMachine$TimerUpdate.class
 /SlotMachine.class
 /Song$1.class
 /Song.class
@@ -57,3 +56,11 @@
 /stevecarell-presstour-1.jpg
 /twitter.class
 /whackAMole.class
+/makeTea.class
+/Cup.class
+/Kettle$Water.class
+/Kettle.class
+/TeaBag.class
+/TeaMaker.class
+/TurtlePond.class
+/TurtlePond$1.class

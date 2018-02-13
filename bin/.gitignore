@@ -7,6 +7,7 @@
 /CandyMan.class
 /Cat.class
 /Copy of Tortoise.jar
+/Cup.class
 /Duck.class
 /DuelingButtons.class
 /EasyButton.class
@@ -16,6 +17,8 @@
 /HarryPortery.class
 /Human.class
 /Jukebox.class
+/Kettle$Water.class
+/Kettle.class
 /LandOfTurtles.class
 /LearningTextBox.class
 /ListenerExample.class
@@ -37,10 +40,14 @@
 /Song.class
 /Squirel.class
 /Supply.class
+/TeaBag.class
+/TeaMaker.class
 /TeaParty.class
 /TeaPartyTest.class
 /Textbook.class
 /TootMachine.class
+/TurtlePond$1.class
+/TurtlePond.class
 /cutnessTV.class
 /gridworld.jar
 /introToGridWorld.class
@@ -56,11 +63,3 @@
 /stevecarell-presstour-1.jpg
 /twitter.class
 /whackAMole.class
-/makeTea.class
-/Cup.class
-/Kettle$Water.class
-/Kettle.class
-/TeaBag.class
-/TeaMaker.class
-/TurtlePond.class
-/TurtlePond$1.class

@@ -30,8 +30,9 @@ public class TurtlePond implements KeyEventDispatcher {
 		
 		// 4. For debugging purposes, show the cookie. The user won’t see this.
 showCookie();
+	System.out.println(Tortoise.getX());
+	System.out.println(Tortoise.getY());
 	}
-
 	private void goUp() {
 		Tortoise.move(speed);
 	}
@@ -42,15 +43,16 @@ showCookie();
 
 	private void goLeft() {
 		// 5. make the tortoise move left at the specified speed (3 lines of code)
-		Tortoise.turn(90);
+		Tortoise.turn(-90);
 		Tortoise.move(5);
-		
+		Tortoise.turn(90);
 	}
 
 	private void goRight() {
 		// 6. use the speed variable to make the tortoise move right
 		Tortoise.turn(90);
 		Tortoise.move(5);
+		Tortoise.turn(-90);
 	}
 
 	private void checkForFood() throws Exception {
@@ -58,17 +60,41 @@ showCookie();
 		int tortoiseLocationY = Tortoise.getY();
 
 		// 7. If the Tortoise is within 100 pixels of the food, set the background color to yellow
-
+		double xDiff = tortoiseLocationX - cookieX;
+		double yDiff = tortoiseLocationY - cookieY;
+		double distance = Math.sqrt((xDiff)*(xDiff) + (yDiff)*(yDiff));
+		if (100 > distance) {
+			setBackgroundColor(Color.GRAY);
+		}
+		if (100 <= distance ) {
+	setBackgroundColor(Color.YELLOW);
+}
 		// 8. If the Tortoise is within 50 pixels of the food, set the background color to orange
-
+if (distance <= 50) {
+	setBackgroundColor(Color.ORANGE);
+}
 		// 9. If the Tortoise is within 20 pixels of the food, set the background color to red
-
+if (distance <= 20) {
+	setBackgroundColor(Color.RED);
+}
 		// 10. If the Tortoise is within 5 pixels of the cookie, make a pop-up to tell them they found it
-				
+				if (distance <= 5) {
+					JOptionPane.showMessageDialog(null, "Your turtle found the kookie");
+				}
 		// 11. If more than 20 seconds have elapsed, tell them the turtle died of hunger!
-
+ long time = getTimeElapsed(); 
+ if (time >= 40) {
+	JOptionPane.showMessageDialog(null, "You turtle died, ooh no");
+}
 		// 12. If the Tortoise crosses it's own path, tell them they failed and move them back to the beginning
-
+boolean ifwasthere = wasHereBefore(tortoiseLocationX, tortoiseLocationY);
+if (ifwasthere) {
+	JOptionPane.showMessageDialog(null, "Your turtles dead");
+ Tortoise.setX(320);	
+ Tortoise.setY(240);
+}
+else {
+}
 	}
 	
 	private long getTimeElapsed() {

@@ -18,6 +18,7 @@ public class ListenerExample implements ActionListener {
 	JPanel panel = new JPanel();
 	JButton button1 = new JButton("1");
 	JButton button2 = new JButton("2");
+	
 
 	
 	// 1. make a run method (this is where we will have most of our code that builds our GUI etc)

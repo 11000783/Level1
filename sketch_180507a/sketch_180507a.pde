@@ -1,13 +1,24 @@
 void setup(){
 size(400, 400);
 background(100, 100, 100);
+float x = 0;
+float y = 100;
+float speed = 1;
 }
 int frogx = 200;
 int frogy = 375;
-Car car = new Car(100, 200, 100, 50, 10);
+Car car1 = new Car(30, 200, 100, 50, 10);
+Car car2 = new Car(200, 50, 100, 50, 10);
+Car car3 = new Car(100, 100, 100, 50, 10);
+Car car4 = new Car(70, 160, 100, 50, 10);
 void draw(){
   background(100);
   fill(20, 900, 100);
+car1.display();
+car2.display();
+car3.display();
+car4.display();
+moveLeft();
 Boolean check = canvasCheck(frogx, frogy);
 ellipse(frogx, frogy, 30, 30);
 if(check==false){
@@ -56,22 +67,28 @@ return false;
 }
 else{
 return true;
-}} 
+}}
 public class Car{
-int  carX;
+int carX;
 int carY;
 int carW;
 int carH;
 int carS;
-}
-public Car(carX, carY, carW, carH, carS){
+
+public Car(int carX , int carY, int carW, int carH, int carS){
 this.carX = carX;
 this.carY = carY;
 this.carW = carW;
 this.carH = carH;
 this.carS = carS;
-}void displ
+}
+public void moveLeft(){
+carX+=-10;
+
+}
+void display() 
   {
     fill(0,255,0);
-    rect(Position of X , Position of Y,  Size of your Car, 50);
+    rect(carX, carY, 30, 50);
   }
+}
